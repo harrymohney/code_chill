@@ -10,7 +10,7 @@ router.get('/', function(req, res, next) {
 
 router.get('/new', workoutsCtrl.new)
 
-// router.post('/', workoutsCtrl.create)
+router.post('/', workoutsCtrl.create)
 
 module.exports = router;
 
