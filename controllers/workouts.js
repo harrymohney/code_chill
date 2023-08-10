@@ -1,6 +1,7 @@
 module.exports = {
     new: newWorkout,
-    create
+    create,
+    index
 }
 
 const Exercise = require('../models/workout')
@@ -20,6 +21,22 @@ async function create(req, res) {
     }
 }
 
+async function index(req, res) {
+    try {
+        const results = await Exercise.find({})
+        res.render('index', {title: ' All Workouts', exercises: results})
+    } catch (err) {
+        console.log(err)
+        res.redirect('/')
+    }
+}
+
+
+async function index(req, res) {
+    Flight.find({})
+        .then(results => res.render('all', { title: 'Upcoming Flights', flights: results }))
+        .catch(err=>res.send(err))
+}
 
 
 
