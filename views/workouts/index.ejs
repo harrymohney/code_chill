@@ -1,0 +1,16 @@
+<%- include('../partials/header') %>
+  <body>
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p>
+
+<!-- <a href="/workouts/new">Add Workout</a> -->
+
+<% exercises.forEach(function(e) { %><br>
+Exercise: <%= e.exercise %><br>
+Weight: <%= e.weight %><br>
+Reps: <%= e.reps %><br>
+
+<% }) %>
+
+
+<%- include('../partials/footer') %>

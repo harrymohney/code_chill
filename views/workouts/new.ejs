@@ -1,0 +1,32 @@
+<%- include('../partials/header') %>
+
+
+<h2>Enter a New Workout:</h2>
+<form action="/workouts" method="POST">
+  <label>Date:
+    <input type="date" name="date" required="true">
+  </label><br>
+  <br>
+  <label>Exercise:
+  <input type="text" list="workouts" name="exercise" required="true">
+  <datalist id="workouts">
+    <option value="Bicep">
+    <option value="Legs">
+    <option value="Tricep">
+    <option value="Back">
+    <option value="Chest">
+  </datalist>
+</label><br>
+<br>
+<label>Weight:
+  <input type="number" name="weight" required="true" min="20" max="500">
+</label><br>
+<br>
+<label>Reps:
+  <input type="number" name="reps" required="true" min="1">
+</label><br>
+<br>
+<button type="submit">Add Workout</button>
+</form>
+
+<%- include('../partials/footer') %>
