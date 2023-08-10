@@ -1,0 +1,10 @@
+<%- include('./partials/header') %>
+
+<% exercise.forEach(function(e) { %><br>
+  Exercise: <%= e.exercise %><br>
+  Weight: <%= e.weight %><br>
+  Reps: <%= e.reps %><br>
+  
+  <% }) %>
+
+<%- include('./partials/footer') %>

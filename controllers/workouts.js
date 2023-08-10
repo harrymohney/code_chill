@@ -1,7 +1,8 @@
 module.exports = {
     new: newWorkout,
     create,
-    index
+    index,
+    show
 }
 
 const Exercise = require('../models/workout')
@@ -29,6 +30,11 @@ async function index(req, res) {
         console.log(err)
         res.redirect('/')
     }
+}
+
+async function show(req, res) {
+  const exercise = await Exercise.findById(req.params.id)
+  res.render('workouts/show', {title: 'Last Workout', exercise})
 }
 
 

@@ -3,6 +3,10 @@
 
 <h2>Enter a New Workout:</h2>
 <form action="/workouts" method="POST">
+  <label>Date:
+    <input type="date" name="date" required="true">
+  </label><br>
+  <br>
   <label>Exercise:
   <input type="text" list="workouts" name="exercise" required="true">
   <datalist id="workouts">
