@@ -1,3 +1,18 @@
 <%- include('../partials/header') %>
 
 <h2>Enter a New Workout:</h2>
+<form action="/workouts" method="POST">
+  <label>Exercise:
+  <input type="text" list="workouts" name="workout" required="true">
+  <datalist id="workouts">
+    <option value="Bicep">
+    <option value="Legs">
+    <option value="Tricep">
+    <option value="Back">
+    <option value="Chest">
+  </datalist>
+</label>
+<button type="submit">Add Workout</button>
+</form>
+
+<%- include('../partials/footer') %>
