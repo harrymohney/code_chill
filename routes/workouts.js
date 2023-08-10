@@ -8,6 +8,12 @@ router.get('/', function(req, res, next) {
   res.send('respond with a resource');
 });
 
-router.get('/new', workoutsCtrl.create)
+router.get('/new', workoutsCtrl.new)
+
+// router.post('/', workoutsCtrl.create)
 
 module.exports = router;
+
+
+
+
